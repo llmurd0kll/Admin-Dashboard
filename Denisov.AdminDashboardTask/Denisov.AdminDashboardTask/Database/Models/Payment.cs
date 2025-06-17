@@ -1,4 +1,4 @@
-﻿namespace Denisov.AdminDashboardTask.Models
+﻿namespace Denisov.AdminDashboardTask.Database.Models
 {
     public class Payment
     {
@@ -6,7 +6,7 @@
         public int ClientId { get; set; }
         public decimal Amount { get; set; }
         public DateTime Date { get; set; }
-        public string Description { get; set; } = null!;
-        public virtual Client Client { get; set; } // Связь one-to-many с Client
+        public string Description { get; set; } = null!; // required!
+        public Client Client { get; set; } = null!; // Navigation property
     }
 }
